@@ -1,0 +1,80 @@
+{
+  "version": "0.1.1",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "resolutions": {
+    "jackspeak": "2.1.1"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "@asruldev/rtools",
+  "author": "Asrul Harahap",
+  "module": "dist/rtools.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/rtools.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/rtools.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.24.7",
+    "@chromatic-com/storybook": "^1",
+    "@size-limit/preset-small-lib": "^11.1.4",
+    "@storybook/addon-essentials": "^8.1.8",
+    "@storybook/addon-interactions": "^8.1.8",
+    "@storybook/addon-links": "^8.1.8",
+    "@storybook/addon-onboarding": "^8.1.8",
+    "@storybook/addon-webpack5-compiler-swc": "^1.0.3",
+    "@storybook/blocks": "^8.1.8",
+    "@storybook/react": "^8.1.8",
+    "@storybook/react-webpack5": "^8.1.8",
+    "@storybook/test": "^8.1.8",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "babel-loader": "^9.1.3",
+    "husky": "^9.0.11",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-is": "^18.3.1",
+    "size-limit": "^11.1.4",
+    "storybook": "^8.1.7",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.6.3",
+    "typescript": "^5.4.5"
+  }
+}
